@@ -31,7 +31,6 @@ export class PhoneinsPage {
 	versionname = "";
 	phoneop = false;
 	tabletop = false; 
-	//public input = document.getElementById("chicken").getElementsByTagName('h3')[0];
 
 	public phonesnap: any;  
 	public tabletsnap: any;

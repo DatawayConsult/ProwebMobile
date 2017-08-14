@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { DataProvider } from '../../providers/data/data';
 import * as _ from 'lodash';
 
 /**
@@ -14,14 +15,17 @@ import * as _ from 'lodash';
 @Component({
   selector: 'page-insurancepolicies',
   templateUrl: 'insurancepolicies.html',
+  providers: [DataProvider]
 })
 
 export class InsurancepoliciesPage {
 
 public device: any;
 public deviceID: any;
-public phones: any;  
-public tablets: any;
+public phonesnap: any;  
+public tabletsnap: any;
+public tablets:FirebaseListObservable<any>;
+public phones:FirebaseListObservable<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public angFire: AngularFireDatabase) {
       this.device = navParams.get('devicename');

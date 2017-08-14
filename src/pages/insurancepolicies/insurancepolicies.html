@@ -3,33 +3,28 @@
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
-
+-->
 <ion-content>
-    <ion-item *ngFor= "let tablet of tablets | async">
-        <ion-avatar item-start>
-          <img src= "{{tablet.image}}">
-        </ion-avatar>
-        <h2>{{tablet.version}}</h2>
-        <h3> 
-          {{tablet.manufacturer}} 
-        </h3>
+    <ion-item *ngFor= "let tablet of tablets | async">>
+        <h3>{{tablet.type}}</h3>
+        <h2> 
+          {{tablet.details}} 
+        </h2>
+        <h2> ${{tablet.price}} </h2>
+        <h3> {{tablet.duration}} months </h3>
         <p>
-          Tablet    
-            <button value = "{{tablet.version}}" (click) = "toSubmission($event)" >View offers for {{tablet.version}}</button>
+            <button value = "{{tablet.key}}" >Submit</button>
         </p>
     </ion-item> 
     <ion-item *ngFor= "let phone of phones | async">
-        <ion-avatar item-start>
-          <img src= "{{phone.image}}">
-        </ion-avatar>
-        <h2>{{tablet.version}}</h2>
-        <h3> 
-          {{tablet.manufacturer}} 
-        </h3>
+        <h3>{{phone.type}}</h3>
+        <h2> 
+          {{phone.details}} 
+        </h2>
+        <h2> ${{phone.price}} </h2>
+        <h3> {{phone.duration}} months </h3> 
         <p>
-          Tablet    
-            <button value = "{{phone.version}}" (click) = "toSubmission($event)" >View offers for {{phone.version}}</button>
+            <button value = "{{phone.key}}" >Submit</button>
         </p>
     </ion-item> 
 </ion-content>
--->
